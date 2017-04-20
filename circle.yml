@@ -1,15 +1,12 @@
 # The deployment section should be excluded until
 # it is explicitly included in module 5 
 
-machine:
-  services:
-    - docker
-
 deployment:
-  hub:
+  dockerhub:
     branch: master
     commands:
-      - $DOCKER_HUB_TRIGGER
+      - curl -H "Content-Type: application/json" --data '{"build": true}' -X POST https://registry.hub.docker.com/u/sambitc/pluralsight-docker-ci/trigger/feb24e3e-5707-419a-a001-5df91dfef6fd/
+	  
 
 test:
   override:    
