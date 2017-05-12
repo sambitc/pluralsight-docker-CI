@@ -15,5 +15,5 @@ The viewer should have Git installed and have a GitHub account.
 
 
 ======================
----==
+---==-------------------
 === trying to fire auto build and deploy===== i.e complete automation
